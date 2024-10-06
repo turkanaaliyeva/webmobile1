@@ -17,14 +17,50 @@
             width: 100%;
         }
         .blue { background-color: #0099ff; flex: 1; }
-        .red { background-color: #ed2939; flex: 1; }
+        .red {
+            background-color: #ed2939;
+            flex: 1;
+            position: relative;
+        }
         .green { background-color: #3c8e33; flex: 1; }
+        .crescent {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            width: 20%;
+            height: 35%;
+            border-radius: 50%;
+            background: white;
+            transform: translate(-50%, -50%);
+        }
+        .crescent::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 65%;
+            width: 90%; 
+            height: 90%;
+            border-radius: 50%;
+            background: #ed2939;
+            transform: translate(-50%, -50%);
+        }
+        .star {
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            font-size: 9vw;
+            color: white;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 <body>
     <div class="flag">
         <div class="blue"></div>
-        <div class="red"></div>
+        <div class="red">
+            <div class="crescent"></div>
+            <span class="star">&#10036;</span>
+        </div>
         <div class="green"></div>
     </div>
 </body>
